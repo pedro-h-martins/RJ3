@@ -131,3 +131,38 @@ class Empresa {
         return JSON.stringify(this.endereco).toLowerCase();
     }
 }
+
+const enderecoEmpresa = new Endereco("SP", "São Paulo", "Av. Paulista", 1000);
+
+const empresa = new Empresa("Telefonica Ltda", "Telefonica", "12345678000190", enderecoEmpresa);
+
+const telefoneEmpresa1 = new Telefone(11, "987654321");
+const telefoneEmpresa2 = new Telefone(11, "912345678");
+
+empresa.telefones.add(telefoneEmpresa1);
+empresa.telefones.add(telefoneEmpresa2);
+
+const claudio = new Cliente("Claudio", "12344678991", new Endereco("SP", "São Paulo", "Rua Almiranda", 10));
+claudio.telefones.add(new Telefone(11, "900000001"));
+claudio.telefones.add(new Telefone(11, "911111111"));
+empresa.clientes.add(claudio);
+
+const ana = new Cliente("Ana", "12344678992", new Endereco("RJ", "Rio de Janeiro", "Rua Mauricio Lopez", 20));
+ana.telefones.add(new Telefone(11, "900000002"));
+ana.telefones.add(new Telefone(11, "911111112"));
+empresa.clientes.add(ana);
+
+const fernando = new Cliente("Fernando", "12344678993", new Endereco("MG", "Belo Horizonte", "Rua São Francisco", 30));
+fernando.telefones.add(new Telefone(11, "900000003"));
+fernando.telefones.add(new Telefone(11, "911111113"));
+empresa.clientes.add(fernando);
+
+const diego = new Cliente("Diego", "12344678994", new Endereco("MT", "Cuiabá", "Rua Vincius Rodrigues", 40));
+diego.telefones.add(new Telefone(11, "900000004"));
+diego.telefones.add(new Telefone(11, "911111114"));
+empresa.clientes.add(cliente4);
+
+const joana = new Cliente("Joana", "12344678995", new Endereco("PE", "São Lorenço da Mata", "Rua Joaquim Monteiro", 50));
+joana.telefones.add(new Telefone(11, "900000005"));
+joana.telefones.add(new Telefone(11, "911111115"));
+empresa.clientes.add(joana);
